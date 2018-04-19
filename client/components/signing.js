@@ -11,15 +11,15 @@ angular.module('app')
 	//console.log(username,password)
 }}
 
-// {this.signup=(username,password,email) =>{
-// 	$http({
-// 		method:'POST',
-// 		url:'/signup',
-// 		data:{username:username,password:password,email:email},
-// 		headers:{'Content-Type':'application/json'}
-// 	})
-// 	//console.log(username,password)
-// }}
+{this.signup=(username,password,email) =>{
+	$http({
+		method:'POST',
+		url:'/signup/'+username,
+		data:{username:username,password:password,email:email},
+		headers:{'Content-Type':'application/json'}
+	})
+	console.log(username)
+}}
 },
 templateUrl:'/templates/signing.html'
 })

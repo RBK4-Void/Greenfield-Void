@@ -53,6 +53,15 @@ app.get('/index1',function (req, res) {
 ;
 
 
+app.get('/', function (req, res) {
+	res.render('singleChat.html')
+	
+});
+
+app.get('/', function (req, res) {
+	res.render('groupChat.html')
+	
+});
 
 
 app.post('/signin', function(req,res) {
@@ -126,7 +135,8 @@ app.get('/logout', function(req, res) {
 
 
 
+var port = process.env.PORT || 4568;
 
-app.listen(3000, function() {
+app.listen(port, function() {
 	console.log('listening on port 3000!');
 });
